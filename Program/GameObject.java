@@ -11,8 +11,18 @@ public abstract class GameObject {
 	private int height;
 	private int width;
 	
+	public GameObject() {
+		
+	}
+	public GameObject(int x, int y, int height, int width) {
+		this.x = x;
+		this.y = y;
+		this.height = height;
+		this.width = width;
+	}
 	public abstract void draw(Graphics g);
 	public abstract void collisionCheck(Ball ball);
+	
 	public int getX() {
 		return x;
 	}
