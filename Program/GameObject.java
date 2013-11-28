@@ -12,7 +12,7 @@ public abstract class GameObject {
 	private int width;
 	
 	public GameObject() {
-		
+		this(0, 0, 0, 0);
 	}
 	public GameObject(int x, int y, int height, int width) {
 		this.x = x;
@@ -46,6 +46,6 @@ public abstract class GameObject {
 	}
 	public void setWidth(int width) {
 		this.width = width;
-	} 
+	}
 	
 }
