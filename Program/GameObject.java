@@ -46,6 +46,6 @@ public abstract class GameObject {
 	}
 	public void setWidth(int width) {
 		this.width = width;
-	}
+	} 
 	
 }
