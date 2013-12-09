@@ -9,9 +9,7 @@ public class Ball extends GameObject {
 	private static Ball ball;
 	private static int BASE_X = 50, BASE_Y = 200;
 	
-	private final int size = 10;	
-	private int x;
-	private int y;
+	private final int size = 10;
 	private double  time; // �쒓컙
 	private int force;
 	private int v; // 湲곕낯 �띾룄
