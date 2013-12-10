@@ -35,6 +35,8 @@ public class GUI extends JFrame implements ActionListener ,KeyListener{
 	private JButton playButton;
 	private JButton exitButton;
 	private JPanel buttonPanel;
+
+	private int selectedCode = 0;
 	
 	private GUI() {
 		cardLayout = new CardLayout();
@@ -106,16 +108,13 @@ public class GUI extends JFrame implements ActionListener ,KeyListener{
 	}
 	@Override
 	public void keyPressed(KeyEvent e) {
-		// TODO Auto-generated method stub
 		int code = e.getKeyCode();
-		if(code == this.selectedCode) return;
+		Ball ball = Ball.getInstance();
 		if(code == KeyEvent.VK_LEFT) {
-			Ball ball = Ball.getInstance();
 			System.out.println("Left");
 			ball.setBallDirection(-1);
 		}
 		else if(code == KeyEvent.VK_RIGHT) {
-			Ball ball = Ball.getInstance();
 			System.out.println("Right");
 			ball.setBallDirection(1);
 		}
@@ -126,8 +125,14 @@ public class GUI extends JFrame implements ActionListener ,KeyListener{
 	}
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+		int code = e.getKeyCode();
+		Ball ball = Ball.getInstance();
+		if(code == KeyEvent.VK_LEFT) {
+			ball.setBallDirection(0);
+		}
+		else if(code == KeyEvent.VK_RIGHT) {
+			ball.setBallDirection(0);
+		}
 	}
 	@Override
 	public void keyTyped(KeyEvent e) {
