@@ -27,7 +27,6 @@ public class ResourceManager {
 	}
 	public void update() {
 		ball.update();
-		ball.downUp();//¾ø¾Ö¾ßµÊ.
 	}
 	public void collision() {
 		collision.check(ball, objects);
