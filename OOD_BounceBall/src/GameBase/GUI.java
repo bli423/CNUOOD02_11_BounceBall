@@ -108,19 +108,21 @@ public class GUI extends JFrame implements ActionListener ,KeyListener{
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		int code = e.getKeyCode();
-		System.out.println(code);
+		if(code == this.selectedCode) return;
 		if(code == KeyEvent.VK_LEFT) {
 			Ball ball = Ball.getInstance();
+			System.out.println("Left");
 			ball.setBallDirection(-1);
 		}
 		else if(code == KeyEvent.VK_RIGHT) {
 			Ball ball = Ball.getInstance();
+			System.out.println("Right");
 			ball.setBallDirection(1);
 		}
 		else if(code == KeyEvent.VK_ESCAPE) {
-			GUI gui = GUI.getInstance();
-			
+			GUI gui = GUI.getInstance();		
 		}
+		this.selectedCode = code;
 	}
 	@Override
 	public void keyReleased(KeyEvent e) {
