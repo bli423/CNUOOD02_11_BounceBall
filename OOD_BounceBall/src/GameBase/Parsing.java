@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 //----------------<<README>>------------------
-//object1��x,y,h,w媛믪쓣 �쎄퀬 object2��x,y留��쎌쓬
+//object1��x,y,h,w媛믪쓣 �쎄퀬 object2��x,y留��쎌쓬
 //arraylist��index 0��ball data
-//�덉쇅泥섎━���ъ떖�댁꽌 �ｌ뼱遊�//--------------------------------------------
+//�덉쇅泥섎━���ъ떖�댁꽌 �ｌ뼱遊�//--------------------------------------------
 
 
 
@@ -29,7 +29,7 @@ import GameRes.Schanze;
 
 public class Parsing {
 
-	// ******�대� �ъ슜 �곸닔媛�吏�젙*********
+	// ******�대� �ъ슜 �곸닔媛�吏�젙*********
 	private final int ERROR = -1;
 	private final int BALL = 0;
 	private final int FADEWALL = 1;
@@ -71,7 +71,7 @@ public class Parsing {
 	private void makeGameObject() throws Exception {
 		while (true) {
 			String readObjectName = this.FileRead();
-			if (readObjectName == null) // EOF 泥섎━
+			if (readObjectName == null) // EOF 泥섎━
 				return;
 
 			int n; // NumOfObjects
@@ -169,7 +169,7 @@ public class Parsing {
 				break;
 			case BALL: // ball data �쎌쓬
 				try {
-					Ball tmp = new Ball();
+					Ball tmp = Ball.getInstance
 					tmp.setX(Integer.parseInt(FileRead()));
 					tmp.setY(Integer.parseInt(FileRead()));
 					objects.add(0, tmp); // 怨듭젙蹂대뒗 �쒖씪 �욎뿉 �붾떎.
